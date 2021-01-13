@@ -9,32 +9,42 @@ int main()
    int marble;
    
    cout << "Please select an option: \n 1. Add marbles \n 2. Remove marbles \n 3. Display total \n 4. Exit\n";
+    
    cin >> selection;
-   //cout << "\nyour number is: " << selection;
+   cout << "\nyour number is: " << selection << endl;
+    mylabel:
    do {
-       if(selection = 1) {
+       
+       if(selection == 1) {
            
-           cout << "Enter how many marbles you are adding: ";
+           cout << "\nEnter how many marbles you are adding: ";
            cin >> marble;
-           bag = bag + marble;
+           bag += marble;
+           cout << "\nTotal: " << bag;
+
+           
+       } else if(selection == 2){
+           
+           cout << "\nEnter how many marbles you are removing: ";
+           cin >> marble;
+           bag -= marble;
            cout << "\nTotal: " << bag;
            
-       } else if(selection = 2){
+       } else if(selection == 3) {
            
-           cout << "Enter how many marbles you are removing: ";
-           cin >> marble;
-           bag = bag - marble;
-           cout << "\nTotal: " << bag;
-           
-       } else if(selection = 3) {
-           
-           cout << "Total marbles in the bag: " << bag;
+           cout << "\nTotal marbles in the bag: " << bag;
            
        } else {
-           cout << "You did not select a viable option. Please try again.";
+           cout << "\nYou did not select a viable option. Please try again.";
        }
+        break;
         
-   }
-   while (selection != 4);
+   } while (selection != 4);
+   cout << "\nSelect another option: ";
+   cin >> selection;
+   if (selection != 4) goto mylabel;
+   
+   cout << "\n\nThank you for playing! \n\nHere is your end total: " << bag;
+        
    return 0;
 }
