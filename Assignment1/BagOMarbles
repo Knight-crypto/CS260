@@ -1,0 +1,40 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   int bag = 0;
+   int selection;
+   int marble;
+   
+   cout << "Please select an option: \n 1. Add marbles \n 2. Remove marbles \n 3. Display total \n 4. Exit\n";
+   cin >> selection;
+   //cout << "\nyour number is: " << selection;
+   do {
+       if(selection = 1) {
+           
+           cout << "Enter how many marbles you are adding: ";
+           cin >> marble;
+           bag = bag + marble;
+           cout << "\nTotal: " << bag;
+           
+       } else if(selection = 2){
+           
+           cout << "Enter how many marbles you are removing: ";
+           cin >> marble;
+           bag = bag - marble;
+           cout << "\nTotal: " << bag;
+           
+       } else if(selection = 3) {
+           
+           cout << "Total marbles in the bag: " << bag;
+           
+       } else {
+           cout << "You did not select a viable option. Please try again.";
+       }
+        
+   }
+   while (selection != 4);
+   return 0;
+}
