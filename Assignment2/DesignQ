@@ -1,0 +1,40 @@
+1. Based on what we know about linked lists, stacks, and queues, design a queue data structure:
+
+   a. What functions are we likely to need for a queue to function like the one discussed in class?
+
+   b. What values will we need to know about the structure for our queue to function properly?
+
+2. Based on what we know about linked lists, design a list data structure that allows us to add (insert) or remove (delete) values at a given location in the list 
+  (instead of the top of a stack or the front or back of a queue):
+
+   a. What functions are we likely to need for a list to function like this?
+
+   b. What values will we need to know about the structure for our list to function properly?
+
+
+
+
+
+1. Queue
+   a. A queue needs: An input, and an output, a max value parameter(maybe).
+   b. We need to know: where the start and end of the queue is.
+   
+   A waiting list for a book from a library would be a queue list.
+   the first on the list is the next one to get the book, you can add people to the list, and as the books become available the first person on the list
+   would get the book until the entire list is cleared out. If it's a popular book then the list would probably always contain a few names.
+   A good way to keep it in order would be to organize by when the request was made. this kind of queue doesn't need a max value because any number of people could
+   request the book.
+   
+   
+2. Lists
+   a. You'd need a way to allocate the data in the list. You can add, remove, or modify at will, but you need to be able to locate the data at each location.
+   b. Where the beginning and the end is. If you know where those are and can travel to them you can bounce off of them to any location in the list you want.
+   
+   List program features and ideas:
+   input
+   storage of data
+   input
+   storage of data
+   move around through and modify or delete data
+   output
+   
