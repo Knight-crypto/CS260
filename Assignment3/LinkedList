@@ -1,0 +1,29 @@
+#include <iostream> 
+#include "node.h"
+#include "Queue.h"
+using namespace std;
+
+
+ 
+int main()
+{
+
+	Queue q;
+	q.enQueue(50);
+	q.enQueue(60);
+	cout << "Starting Queue front : " << (q.front)->data << endl;
+	q.deQueue();
+	cout << "Queue Front after deQueue : " << (q.front)->data << endl;
+	cout << "Queue Rear after deQueue: " << (q.rear)->data << endl;
+	q.deQueue();
+	cout << endl;
+	cout << "Queue is currently empty, reloading values..." << endl << endl;
+	//cout << "Current Queue Front : " << (q.front)->data << endl;   This line caused a blank on my print out, due to nothing in the queue
+	q.enQueue(70);
+	q.enQueue(80);
+	q.enQueue(90);
+	cout << "Current Queue Front : " << (q.front)->data << endl;
+	q.deQueue();
+	cout << "Ending Queue Front : " << (q.front)->data << endl;
+	cout << "Ending Queue Rear : " << (q.rear)->data;
+}
